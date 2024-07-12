@@ -12,7 +12,7 @@ const exit = () => {
 
 <template>
   <div class="container">
-    <div class="display-4 text-center font-judul lh-sm fw-bold py-4">
+    <div class="display-3 text-center font-judul lh-sm fw-bold py-4">
       Aplikasi Tutorial<br />Memasak Mie Indomie ter-enak<br />menggunakan
       Augmented Reality
     </div>

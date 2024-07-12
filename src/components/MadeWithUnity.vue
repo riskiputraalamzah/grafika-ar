@@ -11,8 +11,8 @@ const hideLoading = () => {
 hideLoading();
 </script>
 <template>
-  <div class="container-loading" v-if="hide">
-    <img src="/img/unity.png" alt="" />
+  <div class="container-loading bg-dark" v-if="hide">
+    <img src="/img/unity-white.png" alt="" />
   </div>
 </template>
 
@@ -20,24 +20,23 @@ hideLoading();
 .container-loading {
   position: fixed;
   z-index: 999999;
-  color: white;
-  background-color: white;
-  /* background-color: #24201f; */
+
   inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 20px;
 }
 .container-loading img {
   animation: 3s zoom linear;
+  width: 100%;
 }
 @keyframes zoom {
-  0% {
+  from {
     transform: scale(0.5);
-    opacity: 1;
   }
 
-  100% {
+  to {
     transform: scale(1);
   }
 }
