@@ -5,13 +5,17 @@ const hide = ref(true);
 const hideLoading = () => {
   setTimeout(() => {
     hide.value = !hide.value;
+    toggleScroll(true);
   }, 3000);
 };
-
+const toggleScroll = (scroll = false) => {
+  document.body.style.overflowY = scroll ? "auto" : "hidden";
+};
+toggleScroll();
 hideLoading();
 </script>
 <template>
-  <div class="container-loading bg-dark" v-if="hide">
+  <div class="container-loading" v-if="hide">
     <img src="/img/unity-white.png" alt="" />
   </div>
 </template>
@@ -20,12 +24,12 @@ hideLoading();
 .container-loading {
   position: fixed;
   z-index: 999999;
-
+  background-color: black;
   inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 .container-loading img {
   animation: 3s zoom linear;

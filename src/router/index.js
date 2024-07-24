@@ -8,6 +8,9 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: HomeView,
+      meta: {
+        title: "Indomie AR",
+      },
     },
     {
       path: "/start",
@@ -18,7 +21,9 @@ const router = createRouter({
     {
       path: "/tutorial",
       name: "tutorial",
-
+      meta: {
+        title: "Instruksi Memasak",
+      },
       component: () => import("../views/TutorialView.vue"),
     },
     {

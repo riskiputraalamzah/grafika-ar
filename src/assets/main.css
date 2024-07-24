@@ -17,3 +17,26 @@
 a {
   cursor: pointer;
 }
+
+.home-product {
+  position: relative;
+}
+.home-banner {
+  padding-bottom: 0 !important;
+  position: relative;
+  z-index: 2;
+}
+.home-banner ~ svg {
+  position: relative;
+  margin-top: -20px;
+  z-index: 2;
+}
+
+.home-product::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: 250px;
+  top: -250px;
+  background-color: #ffed9f;
+}
