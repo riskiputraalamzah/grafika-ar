@@ -9,7 +9,7 @@ a
       /></router-link>
     </div>
 
-    <div class="header">
+    <div :class="['header', $route.name == 'ar' ? 'fixed-height' : '']">
       <div
         class="title"
         :class="[$route.name == 'home' ? 'flex-end' : 'flex-start']"
@@ -25,6 +25,9 @@ a
 </template>
 
 <style scoped>
+.fixed-height {
+  height: 100px !important;
+}
 .header .title {
   display: flex;
 
