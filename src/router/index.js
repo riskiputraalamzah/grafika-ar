@@ -17,8 +17,8 @@ const router = createRouter({
       },
     },
     {
-      path: "/start",
-      name: "start",
+      path: "/ar/",
+      name: "ar",
 
       component: () => import("../views/StartView.vue"),
     },
@@ -29,13 +29,6 @@ const router = createRouter({
         title: "Instruksi Memasak",
       },
       component: () => import("../views/TutorialView.vue"),
-    },
-    {
-      path: "/exit",
-      name: "exit",
-      return: () => {
-        return window.alert("ok");
-      },
     },
   ],
 });

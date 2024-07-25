@@ -2,6 +2,18 @@
 import UnityImage from "@/components/MadeWithUnity.vue";
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
+import { useRouter } from "vue-router";
+import { provide, ref } from "vue";
+
+const router = useRouter();
+const srcAr = ref(null);
+
+const dispatchAr = (src) => {
+  srcAr.value = src;
+  router.push("/ar");
+};
+
+provide("ar", { srcAr, dispatchAr });
 </script>
 
 <template>
@@ -18,7 +30,7 @@ import Footer from "@/components/Footer.vue";
       <div id="script-view"></div>
     </teleport>
 
-    <Footer />
+    <Footer v-if="$route.name != 'ar'" />
   </div>
 </template>
 

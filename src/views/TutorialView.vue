@@ -1,9 +1,16 @@
-<script setup></script>
+<script setup>
+import { inject } from "vue";
+const { dispatchAr } = inject("ar");
+</script>
 <template>
   <div class="top container">
     <div class="step">
       <h2>Langkah 1</h2>
-      <img src="/img/panci.png" alt="Gambar Peralatan 1" />
+      <img
+        @click="dispatchAr('https://mywebar.com/p/Project_4_kmxzwbx2sy')"
+        src="/img/panci.png"
+        alt="Gambar Peralatan 1"
+      />
       <div>
         <p>
           Panci adalah alat memasak yang terbuat dari berbagai bahan seperti
@@ -39,7 +46,11 @@
     </div>
     <div class="step">
       <h2>Langkah 2</h2>
-      <img src="/img/kompor.png" alt="Gambar Peralatan 2" />
+      <img
+        @click="dispatchAr('https://mywebar.com/p/Project_3_fb23mbj776')"
+        src="/img/kompor.png"
+        alt="Gambar Peralatan 2"
+      />
       <div>
         <p>
           Kompor gas adalah alat memasak yang menggunakan gas (biasanya LPG)
@@ -84,7 +95,11 @@
     </div>
     <div class="step">
       <h2>Langkah 3</h2>
-      <img src="/img/mie-jadi.png" alt="Gambar Peralatan 3" />
+      <img
+        @click="dispatchAr('https://mywebar.com/p/Project_1_vxiw9ba1vo')"
+        src="/img/mie-jadi.png"
+        alt="Gambar Peralatan 3"
+      />
       <div>
         <p>
           Mie siap untuk disajikan. Menggunakan panci dan kompor, proses

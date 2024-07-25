@@ -1,3 +1,7 @@
+<script setup>
+import { inject } from "vue";
+const { dispatchAr } = inject("ar");
+</script>
 <template>
   <div>
     <!-- body start -->
@@ -34,7 +38,7 @@
           data-id="3"
         >
           <div>
-            <a href="https://www.indomie.com/product/dry-based-noodles"
+            <a @click="dispatchAr('https://mywebar.com/p/Project_0_7f4yj2g6vd')"
               ><img
                 src="https://www.indomie.com/uploads/product/indomie-mi-goreng-special_detail_094906814.png"
                 alt="Indomie Mi Goreng"
@@ -43,12 +47,13 @@
             >
           </div>
           <div>
-            <a href="https://www.indomie.com/product/soup-based-noodles"
+            <a @click="dispatchAr('https://mywebar.com/p/Project_2_ooklbberyb')"
               ><img
                 src="https://www.indomie.com/uploads/product/indomie-mi-goreng-rendang-flavour_detail_114846026.png"
                 alt="Indomie Chicken Flavour "
               />
               <h1 class="f-helb-30">Indomie Goreng Rendang Flavour</h1></a
+            >
             >
           </div>
         </div>
